@@ -3,6 +3,7 @@ client/app/.buildignore
 client/app/.htaccess
 node_modules
 dist
+.npmignore
 .tmp
 .sass-cache
 bower_components

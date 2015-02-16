@@ -53,7 +53,7 @@ module.exports = function (grunt) {
     nggettext_compile: {
       all: {
         options: {
-          module: 'loopbackApp'
+          module: 'belongo'
         },
         files: {
           '<%= yeoman.app %>/js/translations.js': ['po/*.po']
