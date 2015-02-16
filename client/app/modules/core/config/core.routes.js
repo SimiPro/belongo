@@ -14,9 +14,10 @@ angular.module('com.module.core')
 				controller: 'MainCtrl'
 			})
 			.state('app.home', {
-				url:'',
+				url:'/home',
 				templateUrl: 'modules/core/views/home.html',
 				controller: 'HomeCtrl'
 			});
-		$urlRouterProvider.otherwise('/router');
+			$urlRouterProvider.otherwise('/router');
+			
 	});

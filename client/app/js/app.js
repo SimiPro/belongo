@@ -22,7 +22,8 @@ angular
     'toasty',
 
     /** Our modules */
-    'com.module.core'
+    'com.module.core',
+    'com.module.users'
 
   ])
   .run(function ($rootScope, $cookies, gettextCatalog) {
