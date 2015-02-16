@@ -20,6 +20,7 @@ angular
     ///
     'gettext',
     'toasty',
+    'autofields',
 
     /** Our modules */
     'com.module.core',

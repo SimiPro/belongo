@@ -1,0 +1,19 @@
+{
+  "name": "place",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "tralfie": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "type": "object",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
