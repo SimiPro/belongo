@@ -1,6 +1,9 @@
 {
   "name": "belongojs",
   "version": "0.0.0",
+  "engines": {
+        "node": "0.10.x"
+   },
   "scripts": {
     "start": "node server/server.js",
     "dev": "nodemon server/server.js --watch server --watch common --ext js,json ",
