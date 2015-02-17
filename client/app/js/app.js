@@ -24,7 +24,12 @@ angular
 
     /** Our modules */
     'com.module.core',
-    'com.module.users'
+    'com.module.users',
+    'com.module.place',
+
+    /* strongloop */
+    'lbServices'
+
 
   ])
   .run(function ($rootScope, $cookies, gettextCatalog) {

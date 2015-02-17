@@ -1,6 +1,6 @@
 'use strict'
 angular.module('com.module.users')
-	.controller('RegisterCtrl', function($scope, gettextCatalog) {
+	.controller('RegisterCtrl', function($scope, gettextCatalog, toasty, AppAuth, User, $location) {
 
   
 	console.log("RegisterCtrl");
@@ -83,6 +83,40 @@ angular.module('com.module.users')
     console.log($scope);
     //if(!$scope.registerForm.$valid) return;
     console.log("try to register");
+
+    $scope.registration.username = $scope.registration.email;
+    $scope.user = User.save($scope.registration, 
+      function() {
+        $scope.loginResult = User.login({
+          include: 'user',
+          rembemberMe: true
+        }, $scope.registration, 
+          function() {
+            AppAuth.currentUser = $scope.loginResult.user;
+            toasty.pop.success({
+              title: gettextCatalog.getString('Registered'),
+              msg: gettextCatalog.getString('You are registered'),
+              sound: false
+            });
+            $location.path('/');
+        },
+          function(err) {
+            toasty.pop.warning ({
+              title: gettextCatalog.getString ('Error signin in after registration!'),
+              msg: res.data.error.message,
+              sound: false
+            });
+            $scope.loginError = res.data.error;
+        });
+      }, 
+      function(err) {
+          toasty.pop.warning({
+            title: gettextCatalog.getString('Error registering!'),
+            msg: err.data.error.message,
+            sound: false
+          });
+          $scope.registerError = err.data.error;
+        });
   };
 
 });

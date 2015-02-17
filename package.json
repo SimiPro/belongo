@@ -52,6 +52,7 @@
     "loopback-component-passport": "^1.1.2",
     "loopback-component-storage": "^1.2.0",
     "loopback-connector-mongodb": "^1.7.0",
+    "loopback-connector-mysql": "^1.5.1",
     "loopback-datasource-juggler": "^2.16.0",
     "passport": "^0.2.1",
     "passport-facebook": "^1.0.3",

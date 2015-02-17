@@ -30,7 +30,11 @@
     "dataSource": "db",
     "public": true
   },
-  "user": {
+  "placez": {
+    "dataSource": "db",
+    "public": true
+  },
+  "testModel": {
     "dataSource": "db",
     "public": true
   }

@@ -1,0 +1,24 @@
+<div>
+	<div id="login-box">
+		<span class="pull-right image" style="margin: 15px 20px; float: left;">
+            <img gravatar-src="credentials.email" class="img-circle" alt="User Image" gravatar-size="50">
+        </span>
+		
+		<div class="header" translate>Sign In</div>
+		<form role="form" ng-submit="login()" method="post">
+			<div class="bg-gray">
+				<div class="" ng-if="loginError">
+					<p>{{loginError.message | translate}}
+				</div>
+				
+				<auto:fields fields="schema" data="credentials" options="options"></auto:fields>			
+			</div>
+			<div class="footer">
+				<button type="submit" class="btn bg-olive" translate>Sign In</button>
+				<a href='#/register' class="btn bg-yellow btn-block" translate>Or register</a>
+       			<button type="button" ng-click="loginGoogle()" class="btn bg-red btn-block">Google</button>
+		        <button type="button" ng-click="loginFacebook()" class="btn bg-blue btn-block">Facebook</button>
+			</div>
+		</form>
+	</div>
+</div>

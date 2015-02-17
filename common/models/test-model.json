@@ -1,20 +1,14 @@
 {
-  "name": "user",
+  "name": "testModel",
   "base": "PersistedModel",
   "idInjection": true,
   "properties": {
-    "email": {
+    "simi": {
       "type": "string"
     },
-    "password": {
+    "sandy": {
       "type": "string",
       "required": true
-    },
-    "firstname": {
-      "type": "string"
-    },
-    "lastname": {
-      "type": "string"
     }
   },
   "validations": [],
